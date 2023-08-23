@@ -5,7 +5,7 @@ class CalculadoraApp:
     def __init__(self, root):
         self.root = root
         self.root.title("Calculadora")
-        self.root.configure(bg="pink")  # Fondo rosa
+        self.root.configure(bg="pink") 
 
         self.primer_numero_label = tk.Label(root, text="Primer número:", bg="pink")
         self.primer_numero_label.grid(row=0, column=0, padx=10, pady=10, sticky="e")
@@ -64,7 +64,7 @@ class CalculadoraApp:
             self.resultado_entry.insert(0, str(resultado))
             self.resultado_entry.config(state="readonly")
         else:
-            messagebox.showerror("Error", "Ingrese valores numéricos válidos")
+            messagebox.showerror("Error", "Ingrese solo valores numéricos")
 
     def restar(self):
         num1 = self.primer_numero_entry.get()
@@ -76,7 +76,7 @@ class CalculadoraApp:
             self.resultado_entry.insert(0, str(resultado))
             self.resultado_entry.config(state="readonly")
         else:
-            messagebox.showerror("Error", "Ingrese valores numéricos válidos")
+            messagebox.showerror("Error", "Ingrese solo valores numéricos")
 
     def multiplicar(self):
         num1 = self.primer_numero_entry.get()
@@ -88,7 +88,7 @@ class CalculadoraApp:
             self.resultado_entry.insert(0, str(resultado))
             self.resultado_entry.config(state="readonly")
         else:
-            messagebox.showerror("Error", "Ingrese valores numéricos válidos")
+            messagebox.showerror("Error", "Ingrese solo valores numéricos")
 
     def dividir(self):
         num1 = self.primer_numero_entry.get()
@@ -103,7 +103,7 @@ class CalculadoraApp:
             else:
                 messagebox.showerror("Error", "No se puede dividir por cero")
         else:
-            messagebox.showerror("Error", "Ingrese valores numéricos válidos")
+            messagebox.showerror("Error", "Ingrese solo valores numéricos")
 
     def porcentaje(self):
         num1 = self.primer_numero_entry.get()
@@ -115,7 +115,7 @@ class CalculadoraApp:
             self.resultado_entry.insert(0, str(resultado))
             self.resultado_entry.config(state="readonly")
         else:
-            messagebox.showerror("Error", "Ingrese valores numéricos válidos")
+            messagebox.showerror("Error", "Ingrese solo valores numéricos")
 
     def reset(self):
         self.primer_numero_entry.delete(0, tk.END)
@@ -126,6 +126,6 @@ class CalculadoraApp:
 
 if __name__ == "__main__":
     root = tk.Tk()
-    root.geometry("400x300")  # Tamaño de la ventana
+    root.geometry("400x300")  
     app = CalculadoraApp(root)
     root.mainloop()

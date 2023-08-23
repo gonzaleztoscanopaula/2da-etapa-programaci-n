@@ -8,8 +8,8 @@ def incrementar():
 
 ventana = tk.Tk()
 ventana.title("Contador Creciente")
-ventana.geometry("300x150")  # Tamaño más pequeño
-ventana.configure(bg="pink")  # Fondo rosa
+ventana.geometry("300x150")  
+ventana.configure(bg="pink")  
 
 etiqueta = tk.Label(ventana, text="Valor actual:", bg="pink")
 etiqueta.place(x=20, y=20)
