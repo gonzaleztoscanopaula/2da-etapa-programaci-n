@@ -30,7 +30,7 @@ ventana.title("Cálculo de Factoriales")
 ventana.configure(bg="pink")  # Fondo rosa
 ventana.geometry("400x250")  # Tamaño de la ventana
 
-# Crear elementos de la GUI
+# Crear elementos
 etiqueta_n = tk.Label(ventana, text="n:", bg="pink")
 etiqueta_n.pack()
 
