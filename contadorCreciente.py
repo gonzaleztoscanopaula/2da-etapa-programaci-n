@@ -1,23 +1,24 @@
 import tkinter as tk
 
-def incrementar():
-    numero_actual = int(caja1.get())
-    numero_actual += 1
-    caja1.delete(0, tk.END)
-    caja1.insert(0, str(numero_actual))
+def incrementar_contador():
+    valor_actual = int(entrada_contador.get())
+    valor_actual += 1
+    entrada_contador.delete(0, tk.END)
+    entrada_contador.insert(0, str(valor_actual))
 
 ventana = tk.Tk()
 ventana.title("Contador Creciente")
 ventana.geometry("300x150")  
 ventana.configure(bg="pink")  
 
-etiqueta = tk.Label(ventana, text="Valor actual:", bg="pink")
-etiqueta.place(x=20, y=20)
+etiqueta_valor_actual = tk.Label(ventana, text="Valor actual:", bg="pink")
+etiqueta_valor_actual.place(x=20, y=20)
 
-caja1 = tk.Entry(ventana)
-caja1.place(x=100, y=20, width=100)
+entrada_contador = tk.Entry(ventana)
+entrada_contador.place(x=100, y=20, width=100)
+entrada_contador.insert(0, "0")  # Inicializar el valor en 0
 
-boton1 = tk.Button(ventana, text="+", command=incrementar)
-boton1.place(x=120, y=60, width=60)
+boton_incrementar = tk.Button(ventana, text="+", command=incrementar_contador)
+boton_incrementar.place(x=120, y=60, width=60)
 
 ventana.mainloop()

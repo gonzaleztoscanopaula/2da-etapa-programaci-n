@@ -2,24 +2,24 @@ import tkinter as tk
 from tkinter import messagebox
 
 class CalculadoraApp:
-    def __init__(self, root):
-        self.root = root
-        self.root.title("Calculadora")
-        self.root.configure(bg="pink") 
+    def __init__(self, raiz):
+        self.raiz = raiz
+        self.raiz.title("Calculadora")
+        self.raiz.configure(bg="pink") 
 
-        self.primer_numero_label = tk.Label(root, text="Primer número:", bg="pink")
+        self.primer_numero_label = tk.Label(raiz, text="Primer número:", bg="pink")
         self.primer_numero_label.grid(row=0, column=0, padx=10, pady=10, sticky="e")
 
-        self.primer_numero_entry = tk.Entry(root)
+        self.primer_numero_entry = tk.Entry(raiz)
         self.primer_numero_entry.grid(row=0, column=1, padx=10, pady=10)
 
-        self.segundo_numero_label = tk.Label(root, text="Segundo número:", bg="pink")
+        self.segundo_numero_label = tk.Label(raiz, text="Segundo número:", bg="pink")
         self.segundo_numero_label.grid(row=1, column=0, padx=10, pady=10, sticky="e")
 
-        self.segundo_numero_entry = tk.Entry(root)
+        self.segundo_numero_entry = tk.Entry(raiz)
         self.segundo_numero_entry.grid(row=1, column=1, padx=10, pady=10)
 
-        self.botones_frame = tk.Frame(root, bg="pink")
+        self.botones_frame = tk.Frame(raiz, bg="pink")
         self.botones_frame.grid(row=2, column=0, columnspan=2, padx=10, pady=10)
 
         self.suma_button = tk.Button(self.botones_frame, text="+", command=self.sumar, width=5)
@@ -40,10 +40,10 @@ class CalculadoraApp:
         self.reset_button = tk.Button(self.botones_frame, text="RESET", command=self.reset, width=5)
         self.reset_button.grid(row=2, column=1, padx=5, pady=5)
 
-        self.resultado_label = tk.Label(root, text="Resultado:", bg="pink")
+        self.resultado_label = tk.Label(raiz, text="Resultado:", bg="pink")
         self.resultado_label.grid(row=3, column=0, padx=10, pady=10, sticky="e")
 
-        self.resultado_entry = tk.Entry(root, state="readonly")
+        self.resultado_entry = tk.Entry(raiz, state="readonly")
         self.resultado_entry.grid(row=3, column=1, padx=10, pady=10)
 
     def verificar_numeros(self, num1, num2):
